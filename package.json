@@ -1,0 +1,26 @@
+{
+  "name": "bleiyze",
+  "version": "1.0.0",
+  "description": "tool for HTML scraping",
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --config jestconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JunkMeal/bleiyze.git"
+  },
+  "author": "JunkMeal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JunkMeal/bleiyze/issues"
+  },
+  "homepage": "https://github.com/JunkMeal/bleiyze#readme",
+  "devDependencies": {
+    "@types/jest": "^28.1.6",
+    "jest": "^28.1.3",
+    "ts-jest": "^28.0.7",
+    "typescript": "^4.7.4"
+  }
+}
