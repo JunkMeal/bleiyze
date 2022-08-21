@@ -1,10 +1,10 @@
 declare const _default: {
-    findOne: (html: string, identificator: string, firstSelector: string, secondSelector: string) => {
-        result: string;
+    findOne: (html: string, identificator: string, selectors: [string, string][]) => {
+        result: string[];
         excessHTML: string;
     };
-    findAll: (html: string, identificator: string, firstSelector: string, secondSelector: string) => string[];
-    findUntil: (find: string, fstring: string) => string;
+    findAll: (html: string, identificator: string, selectors: [string, string][]) => string[][];
+    findUntil: (find: string, searchString: string) => string;
     findAndCopyUntil: (fstring: string, find: string) => {
         excessHTML: string;
         result: string;
