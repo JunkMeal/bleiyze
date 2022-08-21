@@ -10,6 +10,6 @@ test("findOne innerHtml", () => {
     expect(fader.findOne(html, `"title"`, [[">", "<"]]).result).toStrictEqual(["Hello!"])
 })
 
-test("findOnx", () => {
+test("findOne multiple selectors", () => {
     expect(fader.findOne(html, `"image"`, [["\"","\""], ["\"", "\""]]).result).toStrictEqual(["image_source", "cute cats"])
 })
