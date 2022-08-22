@@ -7,7 +7,7 @@ const findAndCopyUntil = (fstring: string, find: string) => {
             found++
             if (found == find.length){
                 return {
-                    excessHTML: fstring.substring(++i),
+                    excess: fstring.substring(++i),
                     result: copied
                 }
             }
@@ -17,7 +17,7 @@ const findAndCopyUntil = (fstring: string, find: string) => {
         }
     }
     return {
-        excessHTML: fstring,
+        excess: fstring,
         result: ""
     }
 }
@@ -35,27 +35,26 @@ const findUntil = (find: string, searchString: string): string => {
 
 
 const findOne = (html: string, identificator: string, selectors: Array<[string, string]>) => {
-    const afterIdentificator = findUntil(identificator, html)
-    let excess = afterIdentificator
+    let excess = identificator ? findUntil(identificator, html) : html
     let result = []
     for (let i = 0; result.length !== selectors.length && excess; i++) {
         const afterFirst = findUntil(selectors[i][0], excess)
         const content = findAndCopyUntil(afterFirst, selectors[i][1])
-        excess = content.excessHTML
+        excess = content.excess
         result.push(content.result)
     }
 
     return {
         result,
-        excessHTML: excess
+        excess
     };
 }
 
-const findAll = (html: string, identificator: string, selectors: Array<[string, string]>) => {
+const findAll = (html: string, identificator: string, selectors: [string, string][]) => {
     let search = []
     let lhtml = html
     for (let i = 0; true; i++) {
-        const { result, excessHTML: ehtml } = findOne(lhtml, identificator, selectors)
+        const { result, excess: ehtml } = findOne(lhtml, identificator, selectors)
         if (result.length == 0) return search;
             search.push(result)
             lhtml = ehtml
