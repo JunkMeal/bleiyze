@@ -4,21 +4,21 @@
   "description": "tool for HTML scraping",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "build": "tsc",
     "test": "jest --config jestconfig.json"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JunkMeal/bleiyze.git"
+    "url": "git+https://github.com/JunkMeal/fader.git"
   },
   "author": "JunkMeal",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JunkMeal/bleiyze/issues"
+    "url": "https://github.com/JunkMeal/fader/issues"
   },
-  "homepage": "https://github.com/JunkMeal/bleiyze#readme",
+  "homepage": "https://github.com/JunkMeal/fader#readme",
   "devDependencies": {
     "@types/jest": "^28.1.6",
     "jest": "^28.1.3",
