@@ -1,8 +1,8 @@
 # fader
-> made for scrapping static html sites
+> made for scrapping websites
 
 > also its blazingly fast 🔥 🚀 🔥 🚀 🔥 🚀
 
-stop using regex for scraping mostly static sites and use fader!
+stop using regex for scraping websites and use fader!
 
 there are no examples or guides avaible but you can look into the `tests` directory.
